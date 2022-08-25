@@ -18,22 +18,29 @@ img {
 }
 
 #datetime-picker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 30px;
+  border-radius: 5px;
 }
+
 .timer {
   display: flex;
   margin-top: 50px;
 }
 
 button {
-  background-color: #43e843;
+  background-color: #32c682;
+  border: 1px solid #32c682;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
 }
 
 button:disabled {
   background-color: rgb(194, 194, 194);
   color: #21212148;
+  border: 1px solid #21212148;
 }
 
 .field {
@@ -44,12 +51,16 @@ button:disabled {
   align-items: center;
   width: 100px;
   height: 80px;
-  border: 2px solid black;
+  border: 2px solid #971754;
   margin: 10px;
 }
 
 .value {
-  color: purple;
-  font-weight: 600;
-  font-size: 20px;
+  color: #1a4486;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.label {
+  color: #1a4486;
 }

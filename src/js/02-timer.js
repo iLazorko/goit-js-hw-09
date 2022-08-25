@@ -26,7 +26,7 @@ let timerId;
 const options = {
   enableTime: true,
   time_24hr: true,
-  defaultDate: new Date(),
+  // defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
     selectDate = new Date(selectedDates[0]).getTime();
@@ -60,15 +60,16 @@ function currentDate() {
 function checkDate(valueDate) {
   const currentDateValue = currentDate();
   if (currentDateValue > valueDate) {
-    // alert('Please choose a date in the future');
     Notify.failure('Please choose a date in the future');
     inputEl.style.borderColor = '#f71212';
+    startBtn.setAttribute('disabled', true);
+    return;
+  } else {
+    Notify.success('Timer can be started');
+    startBtn.removeAttribute('disabled');
+    inputEl.style.borderColor = '#32c682';
     return;
   }
-  Notify.success('Timer can be started');
-  startBtn.removeAttribute('disabled');
-  inputEl.style.borderColor = '#43e843';
-  return;
 }
 
 function pad(param) {
