@@ -26,7 +26,6 @@ let timerId;
 const options = {
   enableTime: true,
   time_24hr: true,
-  // defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
     selectDate = new Date(selectedDates[0]).getTime();
@@ -41,8 +40,8 @@ startBtn.addEventListener('click', () => {
 
   timerId = setInterval(() => {
     const currentDateValue = currentDate();
-    let raznica = selectDate - currentDateValue;
-    const { days, hours, minutes, seconds } = convertMs(raznica);
+    let countdownNumber = selectDate - currentDateValue;
+    const { days, hours, minutes, seconds } = convertMs(countdownNumber);
     d.textContent = pad(`${days}`);
     h.textContent = pad(`${hours}`);
     min.textContent = pad(`${minutes}`);
