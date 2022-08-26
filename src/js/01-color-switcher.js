@@ -25,11 +25,11 @@ function getRandomHexColor() {
 }
 
 function startChangeBodyColor() {
-  idTimer = setInterval(() => {
+  return (idTimer = setInterval(() => {
     refs.bodyEl.style.backgroundColor = getRandomHexColor();
     refs.btnStart.setAttribute('disabled', true);
     refs.btnStop.removeAttribute('disabled');
-  }, 1000);
+  }, 1000));
 }
 
 function stopChangeBodyColor() {
