@@ -15,6 +15,7 @@ const refs = {
   btnStop: document.querySelector('[data-stop]'),
   bodyEl: document.querySelector('body'),
 };
+let idTimer = null;
 
 refs.btnStart.addEventListener('click', startChangeBodyColor);
 refs.btnStop.addEventListener('click', stopChangeBodyColor);
