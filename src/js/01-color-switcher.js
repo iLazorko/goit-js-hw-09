@@ -25,7 +25,7 @@ function getRandomHexColor() {
 }
 
 function startChangeBodyColor() {
-  timerID = setInterval(() => {
+  idTimer = setInterval(() => {
     refs.bodyEl.style.backgroundColor = getRandomHexColor();
     refs.btnStart.setAttribute('disabled', true);
     refs.btnStop.removeAttribute('disabled');
@@ -33,7 +33,7 @@ function startChangeBodyColor() {
 }
 
 function stopChangeBodyColor() {
-  clearInterval(timerID);
+  clearInterval(idTimer);
   refs.btnStart.removeAttribute('disabled');
   refs.btnStop.setAttribute('disabled', true);
 }
